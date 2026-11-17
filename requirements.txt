@@ -1,0 +1,22 @@
+# Core: Health Index, evaluation, temporal analysis
+numpy>=1.26
+pandas>=2.2
+openpyxl>=3.1
+scikit-learn>=1.4
+matplotlib>=3.8
+pillow>=10.0
+pyyaml>=6.0
+tqdm>=4.66
+python-dotenv>=1.0
+
+# VLM inference
+openai>=1.55
+anthropic>=0.42
+google-genai>=1.0
+
+# Leaf detection (YOLOv11)
+ultralytics>=8.3
+
+# Tests and notebooks
+pytest>=8.0
+jupyterlab

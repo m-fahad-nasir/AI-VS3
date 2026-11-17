@@ -1,0 +1,58 @@
+# VLMs benchmarked in the manuscript (Table 4).
+# The tag is used for the JSONL file name and the results-workbook sheet name.
+# Every model receives the same prompt (configs/prompts) and image.
+
+defaults:
+  max_output_tokens: 2048
+  max_retries: 3
+  retry_sleep_seconds: 5
+
+models:
+  # --- OpenAI ---------------------------------------------------------------
+  GPT_4o:
+    provider: openai
+    model_id: gpt-4o
+    temperature: 0
+  GPT_4.1:
+    provider: openai
+    model_id: gpt-4.1
+    temperature: 0
+  GPT_5.1:
+    provider: openai
+    model_id: gpt-5.1
+    reasoning_effort: medium        # reasoning models take an effort level instead of a temperature
+  GPT_5.2:
+    provider: openai
+    model_id: gpt-5.2
+    reasoning_effort: medium
+
+  # --- Anthropic ------------------------------------------------------------
+  Sonnet_4.6:
+    provider: anthropic
+    model_id: claude-sonnet-4-6
+    temperature: 0
+  Sonnet_4:
+    provider: anthropic
+    model_id: claude-sonnet-4-20250514
+    temperature: 0
+  Haiku_4.5:
+    provider: anthropic
+    model_id: claude-haiku-4-5-20251001
+    temperature: 0
+
+  # --- Google ---------------------------------------------------------------
+  Flash_2.5:
+    provider: google
+    model_id: gemini-2.5-flash
+    temperature: 0
+    thinking: {budget: 0}           # Gemini 2.5: thinking budget in tokens
+  Flash_Lite_2.5:
+    provider: google
+    model_id: gemini-2.5-flash-lite
+    temperature: 0
+    thinking: {budget: 0}
+  Flash_Lite_3.1:
+    provider: google
+    model_id: gemini-3.1-flash-lite-preview
+    temperature: 0
+    thinking: {level: minimal}      # Gemini 3.x: thinking level

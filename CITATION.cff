@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this code or the Tomato-VS3 dataset, please cite the article below."
+title: "AI-VS3: AI-Assisted Vertical Stem Stratified Scouting"
+type: software
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: Nasir
+    given-names: Muhammad Fahad
+    affiliation: Khalifa University of Science and Technology
+  - family-names: Rehman
+    given-names: Mobeen Ur
+    affiliation: United Arab Emirates University
+  - family-names: Shafay
+    given-names: Muhammad
+    affiliation: Khalifa University of Science and Technology
+  - family-names: Hussain
+    given-names: Irfan
+    affiliation: Khalifa University of Science and Technology
+  - family-names: Abdulrahman
+    given-names: Yusra
+    affiliation: Khalifa University of Science and Technology
+preferred-citation:
+  type: article
+  title: "AI-VS3 (AI-Assisted Vertical Stem Stratified Scouting): A Temporal Multimodal Framework for Greenhouse Tomato Plant Health Assessment"
+  journal: "Computers and Electronics in Agriculture"
+  year: 2026
+  authors:
+    - family-names: Nasir
+      given-names: Muhammad Fahad
+    - family-names: Rehman
+      given-names: Mobeen Ur
+    - family-names: Shafay
+      given-names: Muhammad
+    - family-names: Hussain
+      given-names: Irfan
+    - family-names: Abdulrahman
+      given-names: Yusra
+  # doi: 10.xxxx/xxxxx

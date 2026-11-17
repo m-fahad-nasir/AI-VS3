@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aivs3"
+version = "1.0.0"
+description = "AI-VS3: AI-assisted Vertical Stem Stratified Scouting for greenhouse tomato plant health"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "openpyxl>=3.1",
+    "scikit-learn>=1.4",
+    "matplotlib>=3.8",
+    "pillow>=10.0",
+    "pyyaml>=6.0",
+    "tqdm>=4.66",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+vlm = ["openai>=1.55", "anthropic>=0.42", "google-genai>=1.0"]
+detection = ["ultralytics>=8.3"]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools]
+packages = ["aivs3"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,23 @@
+Analyze the provided image of a tomato plant leaf and determine its health status.
+Focus on the primary leaf and firstly classify it as Healthy or Not Healthy.
+If Not Healthy, identify:
+- The disease category: Fungal Leaf Disease, Bacterial Leaf Disease, Viral Leaf Disease, Nutrient Disease, Abiotic or Nematode.
+- The specific disease/disorder name.
+- Severity based on spread: Low, Medium, or High.
+- Your confidence: Low, Medium, or High.
+- Visible symptoms supporting your decision.
+- A brief evidence-based reasoning.
+
+If the image is unclear (blurry, low resolution, poorly lit, or occluded), return "Uncertain" for disease, category, and severity, and set confidence to Low.
+If the leaf is Healthy, set plant_health_status to "Healthy", leave disease fields empty strings, but still fill confidence and reasoning.
+
+Respond strictly in this JSON format:
+{
+  "plant_health_status": "<Healthy | Not Healthy>",
+  "visible_symptoms": ["<symptom1>", "<symptom2>"],
+  "disease_category": "<Fungal | Bacterial | Viral | Nutrient | Abiotic | Nematode | Uncertain>",
+  "disease": "<specific disease/disorder or Uncertain>",
+  "severity": "<Low | Medium | High | Uncertain>",
+  "confidence": "<Low | Medium | High>",
+  "reasoning": "<brief evidence-based explanation>"
+}

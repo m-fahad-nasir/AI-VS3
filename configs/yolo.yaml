@@ -1,0 +1,12 @@
+# Leaf detector training (scripts/02a_train_yolo.py).
+# Values not listed here use the Ultralytics defaults.
+
+model: yolo11l.pt            # yolo11n.pt / yolo11m.pt / yolo11l.pt (Table 3)
+data: data/yolo/dataset.yaml # Ultralytics dataset file (train/val image folders, class names)
+epochs: 100
+imgsz: 640
+batch: 16
+device: 0                    # GPU index, or "cpu"
+seed: 0
+project: outputs/detection
+name: yolo11l_leaf
